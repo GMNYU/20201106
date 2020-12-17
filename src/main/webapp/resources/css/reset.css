@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* css reset */
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+html,
+body,
+div,
+h1,
+h2,
+h3,
+p,
+strong,
+ul,
+ol,
+li,
+a,
+address,
+img,
+header,
+section,
+article,
+footer,
+aside,
+nav,
+table,
+caption,
+thead,
+tbody,
+tr,
+th,
+td,
+form,
+fieldset,
+legend,
+label,
+input {
+	margin: 0;
+	padding: 0;
+}
+table {
+	border-collapse: collapse;
+}
+ul,
+li {
+	list-style: none;
+}
+/* hr은 웹브라우저에게 구분만 알려주는거지 화면에 노출시키는 것이 아니다. */
+hr,
+legend,
+caption {
+	display: none;
+}
+em,
+address {
+	font-style: normal;
+	font-weight: 400;
+}
+img,
+fieldset {
+	border: none;
+} /*border이 가끔 생길때 있으므로 border를 none처리*/
+textarea {
+	resize: none;
+}
+button,
+label {
+	cursor: pointer;
+}
+q {
+	quotes: none;
+} /*자동표현쓰지않겠다*/
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: #222;
+	text-decoration: none;
+}
+body {
+	font-size: 12px;
+	line-height: 1.25;
+	font-family: "Nanum Gothic", 돋움, 굴림;
+}
+.text-center {
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}

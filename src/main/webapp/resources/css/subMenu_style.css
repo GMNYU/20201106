@@ -1,0 +1,393 @@
+@charset "utf-8";
+#wrap {
+	width: 100%;
+	height : 133px;
+	margin: 0 auto;
+}
+/* clearfix는 li에 float:left를 하는경우
+내려가는 것을 방지하는 마감선이다.
+li 부모태그(ul/ol)에 class로 지정한다. */
+.clearfix {
+	*zoom: 1;
+}
+
+.clearfix:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+header {
+	width: 100%;
+	height: 130px;
+	border-bottom: 1px solid #e5e5e5;
+	border-top: 2px solid #000;
+	background-color: #f6f5f0;
+	position: fixed;
+	z-index: 2;
+}
+/* margin:0 auto는 가운데로 정렬. width값이 있어야 먹힌다.
+position:relative는 부모에게 걸어주도록한다.움직이는 컨텐츠의 기준점이 되는 것임. */
+header>.menubar {
+	position: relative;
+	width: 1100px;
+	height: 130px;
+	margin: 0 auto;
+}
+/* absolute로 설정하여 relative를 건 부모 기준으로
+위치 이동시키는 것.left,top,right,bottom으로 이용가능 */
+header>.menubar>.logo {
+	position: absolute;
+	left: 10px;
+	top: 23px;
+	width: 80px;
+	background-image: url(../img/logo.png);
+	/* no-repeat은 이미지의 반복을 막아준다 */
+	background-repeat: no-repeat;
+	/* cover:가로기준으로 사이즈 지정 */
+	background-size: cover;
+}
+/* a태그의 가로세로 값을 지정하려면
+display:block 사용해야함.
+보통 a태그에 세로값 지정합니당 */
+header>.menubar>.logo>a {
+	display: block;
+	height: 80px;
+	/* 안드로메다 : 글을 눈에 안보이도록 함. 시멘틱적 */
+	text-indent: -9999px;
+}
+
+header>.menubar>nav {
+	position: absolute;
+	right: 40px;
+	bottom: 27px;
+}
+
+header>.menubar>nav>.gnb {
+	
+}
+
+header>.menubar>nav>.gnb>li {
+	float: left;
+}
+
+header>.menubar>nav>.gnb>li>a {
+	height: 50px;
+	padding: 0 30px;
+	font-size: 13px;
+	line-height: 50px;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+}
+
+header>.menubar>nav>.gnb>li>ul>li {
+	display: none;
+	position: relative;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	background-color: #f9f9f9;
+}
+
+header>.menubar>nav>.gnb>li>ul>li a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+/* 드롭다운 메뉴바 이동 방지 */
+.menu1 {
+	position: fixed;
+}
+
+.menu2 {
+	position: fixed;
+}
+
+.menu3 {
+	position: fixed;
+}
+
+.menu1 li {
+	width: 100px;
+	display: block;
+}
+
+.menu2 li {
+	width: 100px;
+	display: block;
+}
+
+.menu3 li {
+	width: 100px;
+	display: block;
+}
+
+header>.menubar>nav>.gnb>li:hover {
+	background-color: gray;
+	FONT-WEIGHT: bolder;
+}
+
+header>.menubar>nav>.gnb>li:hover .menu1 li {
+	display: block;
+}
+
+header>.menubar>nav>.gnb>li:hover .menu2 li {
+	display: block;
+}
+
+header>.menubar>nav>.gnb>li:hover .menu3 li {
+	display: block;
+}
+/* 헤더 종료*/
+
+/*본문 시작*/
+#a{
+	height : 500px;
+	width: 100%;
+	position : relative;
+	background: rgba(141,106,14,0.5); 
+}
+
+#imgA{
+	position : absolute;
+	height: 500px;
+	width: 500px;
+	right: 20%;
+}
+#Atextbox { 
+	overflow:hidden; 
+	float:left; 
+	position: absolute; 
+	left: 30%; 
+	top: 10%;
+	padding:47px 20px 0; 
+	width:350px; 
+	height:400px; 
+	background: rgba(0,0,0,0.5); 
+	box-sizing: border-box;
+	border-radius: 5px;
+	}
+#Atextbox h3 { 
+	color:#fff; 
+	font-size:30px; 
+	line-height: 32px;
+}	
+#Atextbox h3 span{ 
+	font-size : 20px;
+	display: block; 
+	font-weight: normal;
+}
+#Atextbox p { 
+	padding:9px 0 0; 
+	font-size:16px; 
+	color:#fff; 
+	text-align: left; 
+	line-height: 24px;
+}
+#Atextbox a { 
+	position: absolute; 
+	right:20px; 
+	bottom:40px;
+	display: block; 
+	width: 160px; 
+	height: 45px; 
+	border: 1px solid #fff; 
+	font-size:16px; 
+	color:#fff; 
+	text-align: center; 
+	line-height: 45px;
+	border-radius: 10px;
+}
+
+#b { 
+	height : 500px; 
+	width: 100%; 
+	position : relative;
+	background :black;
+	}
+
+#imgB{
+	position : absolute;
+	height: 500px;
+	width: 700px;
+	left: 20%;
+}
+
+#Btextbox { 
+	overflow:hidden; 
+	position:absolute; 
+	float:left; 
+	right: 20%;
+	top: 10%;
+	width:300px; 
+	height:350px; 
+	padding:47px 20px 0; 
+	background : rgba(235,227,209,0.5);
+	border-radius: 5px;
+}
+#Btextbox h3 { 
+	color:#400000; 
+	font-size:30px; 
+	line-height: 32px;
+}	
+#Btextbox h3 span{ 
+	font-size:20px; 
+	display: block; 
+	font-weight: normal;
+}
+#Btextbox p { 
+	padding:9px 0 0; 
+	font-size:16px; 
+	color:#400000; 
+	text-align: left; 
+	line-height: 24px;
+}
+#Btextbox a { 
+	position: absolute; 
+	right:20px; 
+	bottom:40px;
+	display: block; 
+	width: 160px; 
+	height: 45px; 
+	border: 1px solid #400000; 
+	font-size:16px; 
+	color:#400000; 
+	text-align: center; 
+	line-height: 45px;
+	border-radius: 10px;
+}
+
+#c { 
+	height : 500px; 
+	width: 100%;  
+	position : relative;
+	background : url('../img/subMenu_divC.jpg') no-repeat;
+	background-size : 100% 100%;
+	
+}
+
+#Ctextbox { 
+	overflow:hidden; 
+	float:left;
+	position: absolute; 
+	left: 30%; 
+	top: 10%;
+	padding:47px 20px 0; 
+	width:300px; 
+	height:350px;
+	background : rgba(0,0,0,0.5);
+	border-radius: 5px;
+	}
+#Ctextbox h3 {
+	color:#fff; 
+	font-size:30px; 
+	line-height: 32px;
+}	
+#Ctextbox h3 span{ 
+	font-size:20px;
+	display: block; 
+	font-weight: normal;
+}
+#Ctextbox p { 
+	padding:9px 0 0; 
+	font-size:16px; 
+	color:#fff; 
+	text-align: left; 
+	line-height: 24px;
+}
+#Ctextbox a { 
+	position: absolute; 
+	right:20px; 
+	bottom:40px;
+	display: block; 
+	width: 160px; 
+	height: 45px; 
+	border: 1px solid #fff; 
+	font-size:16px; 
+	color:#fff; 
+	text-align: center; 
+	line-height: 45px;
+	border-radius: 10px;
+}
+
+#d { 
+	height : 500px; 
+	width: 100%; 
+	position : relative;
+	background : linear-gradient(to left,black,#534737);
+
+	}
+
+#imgD{
+	height: 500px;
+	width: 500px;
+	position: absolute;
+	left : 20%;
+}
+
+#Dtextbox { 
+	overflow:hidden; 
+	position : absolute;
+	float:left; 
+	right:20%; 
+	bottom:10%;
+	width:300px; 
+	height:350px; 
+	padding:47px 20px 0; 
+	background : rgba(235,227,209,0.5);
+	border-radius: 5px;
+	 }
+#Dtextbox h3 { 
+	color:#400000; 
+	font-size:30px;
+	line-height: 32px;
+}	
+#Dtextbox h3 span{ 
+	display: block; 
+	font-weight: normal;
+	font-size: 20px;
+	}
+#Dtextbox p { 
+	padding:9px 0 0; 
+	font-size:16px; 
+	color:#400000; 
+	text-align: left; 
+	line-height: 24px;
+}
+#Dtextbox a { 
+	position: absolute; 
+	right:20px; 
+	bottom:40px;
+	display: block; 
+	width: 160px; 
+	height: 45px; 
+	border: 1px solid #400000; 
+	font-size:16px; 
+	color:#400000; 
+	text-align: center; 
+	line-height: 45px;
+	border-radius: 10px;
+}
+
+
+/*본문 종료*/
+
+/* 푸터 시작 */
+footer {
+	background-color: #59595b;
+	color: white;
+	position : relative;
+	height: 100px;
+	bottom : 0;
+	padding : 50px 0 0 0;
+	text-align: center;
+	clear: both;
+}
+footer ul li{
+	list-style: none;
+	display: inline-block;
+}
+/*푸터 종료*/

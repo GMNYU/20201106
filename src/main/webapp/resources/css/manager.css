@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+#wrap {
+	width: 100%;
+	height : 100px;
+	margin: 0 auto;
+}
+/* clearfix는 li에 float:left를 하는경우
+내려가는 것을 방지하는 마감선이다.
+li 부모태그(ul/ol)에 class로 지정한다. */
+.clearfix {
+	*zoom: 1;
+}
+
+.clearfix:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+
+#t1 { width: 877px; height: 500px; top: 68px; display: block;
+		 position:relative; left: 173px;
+		     margin: 0 auto;
+}
+#t1 th { width: 500px; height: 100px;}
+
+section {
+	width: 100%;
+}
+
+
+/* 타이틀 */
+#title{
+	position: relative;
+	width: 1100px;
+	top: 150px;
+    height: 98px;
+    margin: 0 auto;
+}
+/* 타이틀 */
+/* 메인 게시판 */
+#container {
+	position: relative;
+	width: 1100px;
+	top: 150px;
+	margin: 0 auto;
+}
+
+/* 공지 사항 */
+.notice_tb {
+	width: 1100px;
+	position: relative;
+}
+table.notice_tb th {
+    font-size: 14px;
+    font-weight: bold;
+    color: #222222;
+    text-align: center;
+    padding: 17px 0;
+    border-top: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+}
+.title1 .num{
+	text-align: left;
+	padding-left: 2%;
+}
+.title1 .data{
+	text-align: left;
+	padding-left: 2%;
+}
+.title1 td {
+	padding: 8px 0 9px;
+	border-bottom: solid 1px #d2d2d2;
+	text-align: center;
+	line-height: 40px;
+}
+/* 공지 사항 */
+/* 페이지 갯수 */
+.pagination {
+	height: 27px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.pagination ul {
+	position: relative;
+	left: 400px;
+}
+.pagination ul li {
+	float:left;
+}
+.pagination ul li a {
+	padding:4px;
+	margin-right:10px;
+	width:15px;
+	color:#000;
+	font: 15px;
+	text-align:center;
+	text-decoration:none;
+}
+.pagination ul li a:hover, ul li a:focus {
+	text-decoration: underline;
+}
+/* 페이지 갯수 */
+
+/* 푸터 시작 */
+footer {
+	position: absolute;
+	background-color: #59595b;
+	color: white;
+	height: 100px;
+	width : 100%;
+	margin : 0 auto;
+	padding : 50px 0 0 0;
+	top : 1100px;
+	text-align: center;
+	clear: both;
+}
+footer ul li{
+	list-style: none;
+	display: inline-block;
+}
+/* 푸터 종료 */
+
+/* 타블렛 설정 */
+@media all and (min-width:426px) and (max-width:768px) {
+	body {
+	max-width: 768px;
+	min-width: 426px;
+	height: 1024px;
+	overflow-x: hidden;
+	}
+	
+	header {
+    width: 768px;
+    height: 69px;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px;
+    background-color: #f6f5f0;
+    position: fixed;
+	}
+	header>.menubar {
+    position: fixed;
+    width: 768px;
+    height: auto;
+    margin: 0 auto;
+	}
+	header .menubar .logo {
+	position: absolute;
+    left: 10px;
+    top: 13px;
+    width: 45px;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+	header .menubar .logo a{
+	display: block;
+    height: 45px;
+    text-indent: -9999px;
+	}
+	header>.menubar>nav {
+    position: relative;
+    left: 450px;
+    top: 10px;
+}
+}
+@media all and (min-width:426px) and (max-width:768px) { 
+	section {
+    width: 768px;
+    min-width: 426px;
+	height: 1024px;
+   	overflow-x: hidden;
+	}
+	#title {
+    position: relative;
+    width: 96%;
+    
+    top: 100px;
+    height: 98px;
+    margin: 0 auto;
+	}
+	#article {
+    position: relative;
+    width: 768px;
+    top: 100px;
+    margin: 0 auto;
+	}
+	.notice_tb {
+    width: 96%;
+    margin: 0 auto;
+    position: relative;
+	}
+	.pagination {
+    height: 27px;
+    margin-top: 50px;
+    width: 100%;
+	}
+	.pagination ul {
+    position: relative;
+    left: 300px;
+	}
+}

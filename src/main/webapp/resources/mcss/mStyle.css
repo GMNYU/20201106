@@ -1,0 +1,410 @@
+@charset "utf-8";
+#wrap {
+	width: 100%;
+	height : 100px;
+	margin: 0 auto;
+}
+/* clearfix는 li에 float:left를 하는경우
+내려가는 것을 방지하는 마감선이다.
+li 부모태그(ul/ol)에 class로 지정한다. */
+.clearfix {
+	*zoom: 1;
+}
+
+.clearfix:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+section {
+	width: 100%;
+}
+
+header {
+	width: 100%;
+	height: 130px;
+	border-bottom: 1px solid #e5e5e5;
+	border-top: 2px solid #000;
+	background-color: #f6f5f0;
+	position: fixed;
+	z-index: 2;
+}
+/* margin:0 auto는 가운데로 정렬. width값이 있어야 먹힌다.
+position:relative는 부모에게 걸어주도록한다.움직이는 컨텐츠의 기준점이 되는 것임. */
+header>.menubar {
+	position: relative;
+	width: 1100px;
+	height: 130px;
+	margin: 0 auto;
+}
+/* absolute로 설정하여 relative를 건 부모 기준으로
+위치 이동시키는 것.left,top,right,bottom으로 이용가능 */
+header>.menubar>.logo {
+	position: absolute;
+	left: 10px;
+	top: 23px;
+	width: 80px;
+	background-image: url(../img/logo.png);
+	/* no-repeat은 이미지의 반복을 막아준다 */
+	background-repeat: no-repeat;
+	/* cover:가로기준으로 사이즈 지정 */
+	background-size: cover;
+}
+/* a태그의 가로세로 값을 지정하려면
+display:block 사용해야함.
+보통 a태그에 세로값 지정합니당 */
+header>.menubar>.logo>a {
+	display: block;
+	height: 80px;
+	/* 안드로메다 : 글을 눈에 안보이도록 함. 시멘틱적 */
+	text-indent: -9999px;
+}
+
+header>.menubar>nav {
+	position: absolute;
+	right: 40px;
+	bottom: 27px;
+}
+
+header>.menubar>nav>.gnb {
+	
+}
+
+header>.menubar>nav>.gnb>li {
+	float: left;
+}
+
+header>.menubar>nav>.gnb>li>a {
+	height: 50px;
+	padding: 0 30px;
+	font-size: 13px;
+	line-height: 50px;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+}
+
+header>.menubar>nav>.gnb>li>ul>li {
+	display: none;
+	position: relative;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	background-color: #f9f9f9;
+}
+
+header>.menubar>nav>.gnb>li>ul>li a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+/* 드롭다운 메뉴바 이동 방지 */
+.menu1 {
+	position: fixed;
+}
+
+.menu2 {
+	position: fixed;
+}
+
+.menu3 {
+	position: fixed;
+}
+
+.menu1 li {
+	width: 100px;
+	display: block;
+}
+
+.menu2 li {
+	width: 100px;
+	display: block;
+}
+
+.menu3 li {
+	width: 100px;
+	display: block;
+}
+
+header>.menubar>nav>.gnb>li:hover {
+	background-color: gray;
+	FONT-WEIGHT: bolder;
+}
+
+header>.menubar>nav>.gnb>li:hover .menu1 li {
+	display: block;
+}
+
+header>.menubar>nav>.gnb>li:hover .menu2 li {
+	display: block;
+}
+
+header>.menubar>nav>.gnb>li:hover .menu3 li {
+	display: block;
+}
+/* 헤더 종료*/
+
+/*본문 시작*/
+section{
+	clear: both;
+	background-color: black;
+	width :100%;
+	margin :0 auto;
+	position: relative;
+}
+
+#a{
+	height : 500px;
+	width: 100%;
+	position : relative;
+	background : url('../img/divA.jpg') no-repeat;
+	background-size : 100% 100%; 
+}
+#a #bev{
+	position : absolute;
+	height: 200px;
+	width: 300px;
+	top : 200px;
+	left: 5%;
+}
+#a #s3emb{
+	position : absolute;
+	height: 100px;
+	width: 100px;
+	top : 50px;
+}
+#Atextbox{
+	position : absolute;
+	left: 10%;
+	right : 0%;
+	top : 450px;
+	color: white;
+}
+
+#Atextbox a{
+	color : white;
+	font-size: 15px;
+	border: 2px solid;
+	border-radius: 10px;
+	padding: 5px;
+}
+#Atextbox a:hover{
+	background : rgba(128,128,255,0.7);
+}
+
+#b{
+	background: black;
+	height : 50px;
+	position: relative;
+}
+#Btitle{
+	color: white;
+	position : absolute;
+	font-size: 13px;
+	top : 10px;
+	left : 5px;
+	text-align: left;
+}
+#Btextbox{
+	color: white;
+	position : absolute;
+	font-size: 12px;
+	top : 15px;
+	left : 100px;
+	text-align: left;
+	float: left;
+}
+#Btextbox a{
+	color: white;
+}
+#Btextbox a:hover{
+	text-decoration: underline;
+}
+
+#c{
+	position : relative;
+	height : 300px;
+	width: 100%;
+	background: #cce8e2;
+	background-size : 100% 100%; 
+}
+#c #s2emb{
+	position : absolute;
+	top : 20px;
+	left : 2%;
+	height: 100px;
+	width: 300px;
+}
+#c #MD{
+	position : absolute;
+	bottom : 0px;
+	right: 0px;
+	width: 80%;
+	height : 30%;
+}
+#Ctextbox{
+	position : absolute;
+	left : 2%;
+	top : 145px;
+	height : 60px;
+	width : 300px;
+}
+#Ctextbox ul{
+	position : absolute;
+	left : 15%;
+}
+#Ctextbox ul li{
+	list-style: circle;
+	font-size: 10px;
+}
+#Ctextbox a{
+	position : absolute;
+	left : 55%;
+	right : 10%;
+	top : 45px;
+	font-size : 15px;
+	font-weight : bold;
+	border: 2px solid;
+	border-radius: 10px;
+	padding : 5px;
+	color: #3f1b12;
+}
+#Ctextbox a:hover{
+	background: rgba(0,64,128,0.5);
+}
+#d{
+	position : relative;
+	height : 120px;
+	width: 100%;
+	background: #e6d286;
+}
+#star{
+	position : absolute;
+	height : 100%;
+	width : 50%;
+	left: 0px;
+}
+#Dtextbox{
+	position: absolute;
+	height: 50px;
+	width : 150px;
+	bottom : 30px;
+	left: 50%;
+}
+#Dtextbox h2{
+	font-size: 5px;
+}
+#Dtextbox p{
+	font-size: 3px;
+}
+#e{
+	position : relative;
+	background: url('../img/divE.jpg') no-repeat;
+	background-size : 100% 100%;
+	height: 250px;
+	width: 100%;
+}
+#e #been{
+	height: 200px;
+	width: 100px;
+	position : absolute;
+	top : 10%;	
+	left : 10%;
+}
+#Etextbox{
+	height : 150px;
+	width : 150px;
+	position: absolute;
+	bottom: 50px;
+	right : 8%;
+	font-size: 25px;
+	color : white; 
+}
+#Etextbox h2{
+	font-size: 10px;
+}
+#Etextbox p{
+	font-size : 6px;
+}
+#Etextbox a{
+	font-size : 15px;
+	position: absolute;
+	bottom : 20px;
+	left : 0px;
+	border: 2px solid;
+	border-radius :10px;
+	padding: 5px;
+	color : white; 
+}
+#Etextbox a:hover{
+	background: rgba(0,64,128,0.5);
+}
+/* 본문 종료 */
+
+/* 푸터 시작 */
+footer {
+	background-color: #59595b;
+	color: white;
+	position : relative;
+	height: 50px;
+	bottom : 0;
+	padding : 5px 0 0 0;
+	text-align: center;
+	font-size: 3px;
+}
+footer ul li{
+	list-style: none;
+	display: inline-block;
+}
+
+/* 헤더 부분 */
+@media all and (max-width:425px) {
+	#wrap {
+	max-width: 425px;
+	}
+	body {
+	max-width: 425px;
+	height: 100%;
+	overflow-x: hidden;
+	}
+	
+	header {
+    max-width: 425px;
+    height: 130px;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px;
+    background-color: #f6f5f0;
+    position: relative;
+	}
+/* 헤더 종료 */
+
+/* 네비게이션 바 */
+	header>.menubar {
+    position: relative;
+    width: 96%;
+    height: auto;
+    margin: 0 auto;
+	}
+	header .menubar .logo {
+	position: absolute;
+    left: 10px;
+    top: 13px;
+    width: 45px;
+	}
+	header .menubar .logo a{
+    height: 45px;
+	}
+	header>.menubar>nav {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+	}
+}
+/* 네비 바 */
+@media all and (max-width:425px) {
+	section{
+		overflow-x: hidden;
+	}
+}

@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+#wrap {
+	width: 100%;
+	margin: 0 auto;
+}
+/* clearfix는 li에 float:left를 하는경우
+내려가는 것을 방지하는 마감선이다.
+li 부모태그(ul/ol)에 class로 지정한다. */
+.clearfix {
+	*zoom: 1;
+}
+
+.clearfix:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+header {
+	width: 100%;
+	height: 130px;
+	border-bottom: 1px solid #e5e5e5;
+	border-top: 2px solid #000;
+	background-color: #f6f5f0;
+	position: fixed;
+	z-index: 1000;
+}
+/* margin:0 auto는 가운데로 정렬. width값이 있어야 먹힌다.
+position:relative는 부모에게 걸어주도록한다.움직이는 컨텐츠의 기준점이 되는 것임. */
+header > .menubar {
+	position: relative;
+	width: 1100px;
+	height: 130px;
+	margin: 0 auto;
+}
+/* absolute로 설정하여 relative를 건 부모 기준으로
+위치 이동시키는 것.left,top,right,bottom으로 이용가능 */
+header > .menubar > .logo {
+	position: absolute;
+	left: 10px;
+	top: 23px;
+	width: 80px;
+	background-image: url(../img/logo.png);
+	/* no-repeat은 이미지의 반복을 막아준다 */
+	background-repeat: no-repeat;
+	/* cover:가로기준으로 사이즈 지정 */
+	background-size: cover;
+}
+/* a태그의 가로세로 값을 지정하려면
+display:block 사용해야함.
+보통 a태그에 세로값 지정합니당 */
+header > .menubar > .logo > a {
+	display: block;
+	height: 80px;
+	/* 안드로메다 : 글을 눈에 안보이도록 함. 시멘틱적 */
+	text-indent: -9999px;
+}
+
+header > .menubar > nav {
+	position: absolute;
+	right: 40px;
+	bottom: 27px;
+}
+
+header > .menubar > nav > .gnb {
+}
+
+header > .menubar > nav > .gnb > li {
+	float: left;
+}
+
+header > .menubar > nav > .gnb > li > a {
+	height: 50px;
+	padding: 0 30px;
+	font-size: 13px;
+	line-height: 50px;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+}
+
+header > .menubar > nav > .gnb > li > ul > li {
+	display: none;
+	position: relative;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	background-color: #f9f9f9;
+}
+
+header > .menubar > nav > .gnb > li > ul > li a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+/* 드롭다운 메뉴바 이동 방지 */
+.menu1 {
+	position: fixed;
+}
+
+.menu2 {
+	position: fixed;
+}
+
+.menu3 {
+	position: fixed;
+}
+
+.menu1 li {
+	width: 100px;
+	display: block;
+}
+
+.menu2 li {
+	width: 100px;
+	display: block;
+}
+
+.menu3 li {
+	width: 100px;
+	display: block;
+}
+
+header > .menubar > nav > .gnb > li:hover {
+	background-color: gray;
+	FONT-WEIGHT: bolder;
+}
+
+header > .menubar > nav > .gnb > li:hover .menu1 li {
+	display: block;
+}
+
+header > .menubar > nav > .gnb > li:hover .menu2 li {
+	display: block;
+}
+
+header > .menubar > nav > .gnb > li:hover .menu3 li {
+	display: block;
+}
+/* 헤더 종료*/
+
+
+/* 컨텐츠 부분 */
+section {
+	width: 769px;
+	margin: 0 auto;
+}
+/*제목*/
+#foodLogo{
+	position: absolute;
+	top: 150px;
+}
+
+/*공통 요소(class)선언*/
+.title {
+	width: 769px;
+	height: 40px;
+	position: absolute;
+	background-color: #f4f4f2;
+}
+.titleFrame > li {
+	float: left;
+	width: 200px;
+	height: 40px;
+	margin-left: 20px;
+	line-height: 40px;
+	text-align: left;
+}
+.list {
+	position: absolute;
+	top: 80px;
+	width: 769px;
+	height: auto;
+}
+.list > .thnList {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	width: 769px;
+}
+.thnList > li > ol > li {
+}
+.thnList > li > ol > .frame {
+	width: 180px;
+}
+.thnList > li > ol > .frame > img {
+	display: block;
+	height: 180px;
+}
+.thnList > li > ol > .frame > a > img {
+	display: block;
+	width: 100%;
+}
+.thnList > li > ol > li > a {
+	display: block;
+	height: 180px;
+	text-indent: -9999px;
+}
+
+.thnList > li > ol > .name {
+	width: 180px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+/*공통 요소 선언 종료*/
+
+/*분류 시작*/
+#bread{
+	width: 769px;
+	height: auto;
+	position: absolute;
+	top: 190px;
+}
+#breadItem1{
+	position: absolute;
+	top : 230px;
+	left: 196.4px;
+}
+
+#cake{
+	width: 769px;
+	height: auto;
+	position: absolute;
+	top: 760px;
+}
+#salad{
+	width: 769px;
+	height: auto;
+	position: absolute;
+	top: 1330px;
+}
+#saladItem1{
+	position: absolute;
+	top : 460px;
+	left: 196.4px;
+}
+
+#icecream{
+	width: 769px;
+	height: auto;
+	position: absolute;
+	top: 2130px;
+}
+/*분류 종료*/
+
+/* 푸터 시작 */
+footer {
+	background-color: #59595b;
+	color: white;
+	position : absolute;
+	height: 100px;
+	width : 100%;
+	top : 2470px;
+	text-align: center;
+}
+footer ul li{
+	list-style: none;
+	display: inline-block;
+}
+/*푸터 종료*/

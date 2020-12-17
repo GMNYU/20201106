@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+
+	div.list { top: 70px; padding: 30px 30px 0 10px; border:1px solid #ddd; position:relative;
+	 			height: 150px;
+	 			border-radius:5px; margin-bottom: 20px; }
+	div.list thnList { font-size:30px; font-weight:bold; padding-bottom:20px; }
+	div.list thnList li { padding-top:50px; position:absolute; right:30px; top:50px; }
+	div.list thnList li a { bottom: 500px; padding: 100px 0px 0px 10px; }
+	
+	.smap { display:block; width:150px; height:40px;
+		position:relative; display: inline-block; left: 450px;	}
+
+	.smap li { margin: 15px 3px 0 0; padding: 0 0 0 0;
+    border : 0;	float: left; }
+    
+    dl.list-tema dt { position:absolute; top:30px; }
+	dl.list-tema dt.dt1 { top: 70px; left: 50px; }
+	dl.list-tema dt.dt2 { top: 70px; left: 300px; }
+	dl.list-tema dt a { display:block; width:200px; height:35px; line-height:35px; border-radius:3px; background:#f4f4f1; color:#222; font-size:14px; text-align:center; }
+	dl.list-tema dt a.selected { background:#006633; color:#fff; }
+	dl.list-tema dd { padding-top:55px; }
+	dl.list-tema dd.app { padding-top:0; }
+		
+
+/* 컨텐츠 부분 */
+section {
+	width: 769px;
+	height : auto;
+	margin: 0 auto;
+}
+/*제목*/
+#beverageLogo{
+	position: absolute;
+	top: 150px;
+}	
+/*공통 요소(class)선언*/
+.title {
+	width: 800px;
+	height: 100px;
+	position: absolute;
+	background-color: #f4f4f2;
+}
+
+.titleFrame > li {
+	float: left;
+	width: 150px;
+	height: 40px;
+	margin-right: 10px;
+	line-height: 40px;
+	text-align: center;
+}
+.titleFrame > li:last-child {
+	width: 300px;
+}
+.titleFrame > #img1 {
+	width: 50px;
+	height: 40px;
+}
+.titleFrame > #img1 > img {
+	width: 100%;
+}
+
+/*분류 시작*/
+#coldBrewCoffe{
+	width: 769px;
+	height: auto;
+	position: absolute;
+	top: 80px;
+}
+/*분류 종료*/
+
+	
+div.list10 { width: 940px;  height: auto; top: 400px; padding: 10px 10px 0 10px; 
+			border:1px solid #ddd; position:absolute; 
+	 		border-radius:5px; margin-bottom: 20px;  
+	 		}
+
+div.list1 { width: 222px;  height: 250px; top: 400px; padding: 30px 30px 0 10px; 
+			border:1px solid #ddd; position:absolute;
+	 		border-radius:5px; margin-bottom: 20px; }
+	
+/* 푸터 시작 */
+footer {
+	background-color: #59595b;
+	color: white;
+	position : absolute;
+	height: 100px;
+	width : 100%;
+	top : 2470px;
+	text-align: center;
+}
+footer ul li{
+	list-style: none;
+	display: inline-block;
+}
+/*푸터 종료*/	 		
+	 				
+	 		

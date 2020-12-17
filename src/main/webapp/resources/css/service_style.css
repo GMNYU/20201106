@@ -1,0 +1,346 @@
+@charset "utf-8";
+#wrap {
+	width: 100%;
+	height : 133px;
+	margin: 0 auto;
+}
+/* clearfix는 li에 float:left를 하는경우
+내려가는 것을 방지하는 마감선이다.
+li 부모태그(ul/ol)에 class로 지정한다. */
+.clearfix {
+	*zoom: 1;
+}
+
+.clearfix:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+
+header {
+	width: 100%;
+	height: 130px;
+	border-bottom: 1px solid #e5e5e5;
+	border-top: 2px solid #000;
+	background-color: #f6f5f0;
+	position: fixed;
+	z-index: 2;
+}
+/* margin:0 auto는 가운데로 정렬. width값이 있어야 먹힌다.
+position:relative는 부모에게 걸어주도록한다.움직이는 컨텐츠의 기준점이 되는 것임. */
+header>.menubar {
+	position: relative;
+	width: 1100px;
+	height: 130px;
+	margin: 0 auto;
+}
+/* absolute로 설정하여 relative를 건 부모 기준으로
+위치 이동시키는 것.left,top,right,bottom으로 이용가능 */
+header>.menubar>.logo {
+	position: absolute;
+	left: 10px;
+	top: 23px;
+	width: 80px;
+	background-image: url(../img/logo.png);
+	/* no-repeat은 이미지의 반복을 막아준다 */
+	background-repeat: no-repeat;
+	/* cover:가로기준으로 사이즈 지정 */
+	background-size: cover;
+}
+/* a태그의 가로세로 값을 지정하려면
+display:block 사용해야함.
+보통 a태그에 세로값 지정합니당 */
+header>.menubar>.logo>a {
+	display: block;
+	height: 80px;
+	/* 안드로메다 : 글을 눈에 안보이도록 함. 시멘틱적 */
+	text-indent: -9999px;
+}
+
+header>.menubar>nav {
+	position: absolute;
+	right: 40px;
+	bottom: 27px;
+}
+
+header>.menubar>nav>.gnb {
+	
+}
+
+header>.menubar>nav>.gnb>li {
+	float: left;
+}
+
+header>.menubar>nav>.gnb>li>a {
+	height: 50px;
+	padding: 0 30px;
+	font-size: 13px;
+	line-height: 50px;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+}
+
+header>.menubar>nav>.gnb>li>ul>li {
+	display: none;
+	position: relative;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	background-color: #f9f9f9;
+}
+
+header>.menubar>nav>.gnb>li>ul>li a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+/* 드롭다운 메뉴바 이동 방지 */
+.menu1 {
+	position: fixed;
+}
+
+.menu2 {
+	position: fixed;
+}
+
+.menu3 {
+	position: fixed;
+}
+
+.menu1 li {
+	width: 100px;
+	display: block;
+}
+
+.menu2 li {
+	width: 100px;
+	display: block;
+}
+
+.menu3 li {
+	width: 100px;
+	display: block;
+}
+
+header>.menubar>nav>.gnb>li:hover {
+	background-color: gray;
+	FONT-WEIGHT: bolder;
+}
+
+header>.menubar>nav>.gnb>li:hover .menu1 li {
+	display: block;
+}
+
+header>.menubar>nav>.gnb>li:hover .menu2 li {
+	display: block;
+}
+
+header>.menubar>nav>.gnb>li:hover .menu3 li {
+	display: block;
+}
+/* 헤더 종료*/
+
+/*본문 시작*/
+section{
+	clear: both;
+	width: 100%;
+}
+
+/*멤버쉽 시작*/
+#membership{
+	background : url('../img/service_mebershipGuide.jpg');
+	background-size : 100%;
+	height : 800px;
+	width: 1500px;
+	margin: 0 auto;
+}
+
+/*멤버쉽 소개*/
+#membershipGuide{
+	height : 140px;
+	width: 100%;
+	margin: 0 auto;
+	background: rgb(255,255,255,0.5);
+	text-align: center;
+	padding: 60px 0 0 0;
+}
+#membershipGuide h2{
+	font-size: 30px;
+	font-weight : bolder;
+	color: #400000;
+}
+#membershipGuide p{
+	font-size: 15px;
+	font-weight : bold;
+	color: #400000;
+}
+
+/*레밸 소개 시작*/
+#levelGuide{
+	width: 100%;
+	height: 500px;
+	margin: 0 auto;
+	padding : 50 0 50 0;
+	position: relative;
+}
+
+/*레벨가이드 내의 공통 요소 선언*/
+.count{
+	position: absolute;
+	top : 78px;
+	left : 47.4%;
+	font-weight : bold; 
+	color: white;
+}
+.levelName{
+	position: absolute;
+	top : 105px;
+	left : 30px;
+}
+.condition{
+	position: absolute;
+	top : 133px;
+	left : 25px;
+}
+.bnfTextbox{
+	position: absolute;
+	bottom: 10px;
+	width: 200px;
+	height: 280px;
+	background: rgb(255,255,255,0.7);
+	border-radius: 10px;
+}
+
+.bnfTextbox ul li{
+	font-size: 15px;
+	font-weight: bold;
+	margin : 5px;
+	color: #400000;
+}
+
+/*welcome level*/
+#benefit1{
+	float: left;
+	background : url('../img/level_01.png') no-repeat;
+	background-size: 200px 200px;
+	width: 200px;
+	height: 500px;
+	position: absolute;
+	left: 350px;
+	
+}
+#bnf1span{
+	font-size: 12px;
+}
+/*green level*/
+#benefit2{
+	float: left;
+	background : url('../img/level_02.png') no-repeat;
+	background-size: 200px 200px;
+	width: 200px;
+	height: 500px;
+	position : absolute;
+	left: 650px;
+	
+	
+}
+/*gold level*/
+#benefit3{
+	float: left;
+	background : url('../img/level_03.png') no-repeat;
+	background-size: 200px 200px;
+	width: 200px;
+	height: 500px;
+	position: absolute;
+	left : 950px;
+}
+/*레벨 소개 종료*/
+/*멤버쉽 종료*/
+
+/*카드 시작*/
+#card{
+	width: 1500px;
+	height : 800px;
+	margin: 0 auto;
+	background: url('../img/service_card.jpg') no-repeat;
+	background-size : 100% 100%;
+	position: relative;
+}
+/*카드 안내*/
+#cardGuide{
+	height: 120px;
+	width: 100%;
+	background: url('../img/service_cardGuide.jpg') no-repeat;
+	background-size: 100% 200px;
+	position: relative;
+	text-align: center;
+	padding: 80px 0 0 0;
+	border-top: #361c0a 5px solid;
+	border-bottom: #747474 5px solid;
+}
+#cardGuide h2{
+	font-size: 30px;
+	font-weight : bolder;
+	color: white;
+}
+/*카드 혜택 안내*/
+#cardBenefit{
+	height: 100px;
+	width: 600px;
+	padding : 20 0 0 60px;
+	position: absolute;
+	left: 30%;
+	top : 250px;
+	color: white;
+	background: rgba(0,0,0,0.7);
+	border-radius: 10px;
+	
+}
+/*카드 구매 및 사용 방법*/
+#cardSale{
+	height: 150px;
+	width: 600px;
+	padding : 10 0 10 60px;
+	position: absolute;
+	left: 30%;
+	top : 380px;
+	color: white;
+	background: rgba(0,0,0,0.7);
+	border-radius: 10px;
+}
+/*카드 충전 정보*/
+#cardCharge{
+	height: 150px;
+	width: 600px;
+	padding : 20 0 0 60px;
+	position: absolute;
+	left: 30%;
+	top : 560px;
+	color: white;
+	background: rgba(0,0,0,0.7);
+	border-radius: 10px;
+}
+/*카드 종료*/
+/*본문 종료*/
+
+/* 푸터 시작 */
+footer {
+	background-color: #59595b;
+	color: white;
+	position : relative;
+	height: 100px;
+	width : 1500px;
+	bottom : 0;
+	padding : 50px 0 0 0;
+	margin : 0 auto;
+	text-align: center;
+	clear: both;
+}
+footer ul li{
+	list-style: none;
+	display: inline-block;
+}
+/*푸터 종료*/
